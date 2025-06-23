@@ -1,0 +1,28 @@
+/* Ensure slideshow covers the whole screen */
+.slideshow-container {
+    position: fixed;
+    /* Fixed position so it stays in place */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+    /* Ensures it stays behind the content */
+}
+
+/* Style for images in slideshow */
+.slideshow-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slideshow-container img.active {
+    opacity: 1;
+}
